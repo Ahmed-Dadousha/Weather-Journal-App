@@ -28,12 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	//Get Data from openWeatherMap api
 	const GetData = async (URL, Code, Key) => {
-		const res = await fetch(URL + Code + Key);
-		try {
-			const data = await res.json();
-			return data;
-		} catch (error) {
-			console.log('Error ' + error);
+		if (!Code) {
+			alert('Zip code can not be null');
+			document.querySelector('#zip').focus();
+			return 1;
+		} else {
+			const res = await fetch(URL + Code + Key);
+			try {
+				const data = await res.json();
+				return data;
+			} catch (error) {
+				console.log('Error ' + error);
+			}
 		}
 	};
 
@@ -59,6 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		};
 		// Calling Functions
 		GetData(baseURL, zipCode, apiKey).then((data) => {
+			if (data === 1) {
+				return;
+			} else if (!userResponse) {
+				alert('Enter Your Feeling');
+				document.querySelector('#feeling').focus();
+				return;
+			}
+
 			postData('/postData', {
 				date,
 				temperature: data.main.temp,
