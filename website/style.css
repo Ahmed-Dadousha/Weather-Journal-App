@@ -1,112 +1,110 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+/* Start global */
+body {
+	background: url(./bg.jpg);
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+#app {
+	display: flex;
+	color: #f0d43a;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 }
-
-.holder{
-
+.holder {
+	display: flex;
+	flex-direction: column;
 }
+/* End global */
 
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
+/* Start headline */
 .headline {
-
+	background-color: #0a113a;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
 }
-.title{
+/* End headline */
 
+/* Start zip */
+.zip {
+	margin-top: 50px;
 }
+.zip input {
+	width: 400px;
+	height: 50px;
+	text-align: center;
+	border-radius: 30px;
+	border-style: none;
+	outline: none;
+	background-color: darkslateblue;
+	font-size: 20px;
+}
+/* End zip */
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
+/* Start feel */
+.feel {
+	margin-top: 20px;
+	width: 400px;
+	height: 50px;
 }
+.feel input {
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	border: none;
+	outline: none;
+	background-color: darkslateblue;
+	font-size: 20px;
+	text-align: center;
+}
+/* End feel */
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+/* Start controls  */
+.controls {
+	margin-top: 50px;
 }
+button {
+	width: 200px;
+	height: 50px;
+	background-color: #0a113a;
+	color: #f0d43a;
+	border-radius: 30px;
+	cursor: pointer;
+	font-size: 20px;
+}
+button:hover {
+	background-color: navy;
+}
+button:active {
+	background-color: darkblue;
+}
+/* End controls */
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
+/* Start entry */
+.entry {
+	position: absolute;
+	margin-top: 100px;
+	color: cornflowerblue;
+	width: 700px;
+	height: 100px;
+	top: 400px;
+	font-size: 50px;
 }
-button:hover{
-    cursor: pointer;
+.entry .title {
+	position: relative;
+	top: 0px;
+	text-align: center;
 }
-h1{
-    font-size: 36px;
+.entry #entryHolder {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
 }
-
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
-/* Reset style for HTML element on active to have no border*/
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
+/* End entry */
