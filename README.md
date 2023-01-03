@@ -20,5 +20,8 @@
 ## Setup
 
 - Install dependencies `npm i express cors body-parser`.
+
+## Usage
+
 - Run `node server.js` to start the server.
 - Go to `127.0.0.1:8000` in your browser.
