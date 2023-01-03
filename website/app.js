@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let date = d.getDate() + '.' + d.getMonth() + 1 + '.' + d.getFullYear();
 
 	//Adding Data to Server
-	const postData = async (url = '', Data = {}) => {
+	const postData = async (Data = {}) => {
 		const response = await fetch('/postData', {
 			method: 'POST',
 			credentials: 'same-origin',
